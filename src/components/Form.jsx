@@ -21,7 +21,7 @@ export default class Form extends Component {
         <label htmlFor="name-input">
           Nome
           <input
-            name="name"
+            name="cardName"
             id="input-name"
             placeholder="Nome"
             type="text"
@@ -33,7 +33,7 @@ export default class Form extends Component {
         <label htmlFor="description-input">
           Descrição
           <textarea
-            name="textarea"
+            name="cardDescription"
             id="textarea"
             value={ cardDescription }
             data-testid="description-input"
@@ -44,7 +44,7 @@ export default class Form extends Component {
           Attr01
           <input
             type="number"
-            name="att1"
+            name="cardAttr1"
             id="input-att1"
             placeholder=""
             value={ cardAttr1 }
@@ -56,7 +56,7 @@ export default class Form extends Component {
           Attr02
           <input
             type="number"
-            name="att2"
+            name="cardAttr2"
             id="input-att2"
             placeholder=""
             value={ cardAttr2 }
@@ -68,7 +68,7 @@ export default class Form extends Component {
           Attr03
           <input
             type="number"
-            name="att3"
+            name="cardAttr3"
             id="input-att3"
             placeholder=""
             value={ cardAttr3 }
@@ -79,7 +79,7 @@ export default class Form extends Component {
         <label htmlFor="image-input">
           Imagem
           <input
-            name="image"
+            name="imcardImage"
             id="input-image"
             value={ cardImage }
             type="text"
@@ -90,7 +90,7 @@ export default class Form extends Component {
         <label htmlFor="rare-input">
           Raridade
           <select
-            name="rare"
+            name="cardRare"
             id="input-rare"
             value={ cardRare }
             data-testid="rare-input"
@@ -103,7 +103,7 @@ export default class Form extends Component {
         </label>
         <label htmlFor="trunfo-input">
           <input
-            name="checkbox"
+            name="cardTrunfo"
             id="input-trunfo"
             checked={ cardTrunfo }
             type="checkbox"
