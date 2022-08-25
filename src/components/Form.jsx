@@ -79,7 +79,7 @@ export default class Form extends Component {
         <label htmlFor="image-input">
           Imagem
           <input
-            name="imcardImage"
+            name="cardImage"
             id="input-image"
             value={ cardImage }
             type="text"
