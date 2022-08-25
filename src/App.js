@@ -47,6 +47,8 @@ class App extends React.Component {
         || somAtt > maxSom) });
   };
 
+  //  Requisito 6 e 8 feito com a mentoria de João Matheus turma 24 B
+
   saveClick = () => {
     const { cardName, cardDescription, cardImage,
       cardAttr1, cardAttr2, cardAttr3, cardRare } = this.state;
