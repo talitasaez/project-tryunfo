@@ -13,7 +13,7 @@ class App extends React.Component {
     cardImage: '',
     cardRare: 'normal',
     cardTrunfo: false,
-    // hasTrunfo: false,
+    hasTrunfo: false,
     isSaveButtonDisabled: true,
     saveButtonArray: [],
   };
@@ -68,12 +68,21 @@ class App extends React.Component {
       cardAttr3: '0',
       cardRare: 'normal',
       saveButtonArray: [...e.saveButtonArray, info],
-    }));
+    }), this.validationcheck);
+  };
+
+  validationcheck = () => {
+    const { cardTrunfo } = this.state;
+    if (cardTrunfo === true) {
+      this.setState({
+        hasTrunfo: true,
+      });
+    }
   };
 
   render() {
     const { cardName, cardDescription, cardImage, cardAttr1, cardAttr2,
-      cardAttr3, cardRare, cardTrunfo, isSaveButtonDisabled } = this.state;
+      cardAttr3, cardRare, cardTrunfo, isSaveButtonDisabled, hasTrunfo } = this.state;
     const { saveButtonArray } = this.state;
     return (
       <div>
@@ -88,6 +97,7 @@ class App extends React.Component {
           onInputChange={ this.handleChange }
           isSaveButtonDisabled={ isSaveButtonDisabled }
           onSaveButtonClick={ this.saveClick }
+          hasTrunfo={ hasTrunfo }
         />
         <Card
           cardName={ cardName }
